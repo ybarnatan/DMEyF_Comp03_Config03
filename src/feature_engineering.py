@@ -405,6 +405,10 @@ def feature_engineering_ctrx_norm(df):
     conn.close()
     logger.info("Fin del feat eng del ctrx_quarter_normalizado")
     return
+
+
+
+
 def feature_engineering_mpayroll_sobre_edad(df):
     logger.info("Comienzo del feat de mpayroll_sobre_edad")
     if "mpayroll_sobre_edad" in df.columns:
@@ -417,7 +421,7 @@ def feature_engineering_mpayroll_sobre_edad(df):
                 from df_completo"""
     conn=duckdb.connect(PATH_DATA_BASE_DB)
     conn.execute(sql)
-    sql_logger = """select mpay_roll ,cliente_edad ,mpayroll_sobre_edad from df_completo limit 50"""
+    sql_logger = """select mpayroll ,cliente_edad ,mpayroll_sobre_edad from df_completo limit 50"""
     logger.info(f"Las columnas mpayroll_sobre_edad creada : {conn.execute(sql_logger)}")
     conn.close()
     logger.info("Fin del feat eng del mpayroll_sobre_edad")
