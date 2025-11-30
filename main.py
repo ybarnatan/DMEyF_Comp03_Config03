@@ -12,7 +12,8 @@ from src_feateng.feat_eng_armado_tablas import lanzar_feat_eng
 from src_bayesianas.bayesiana_lgbm_2 import lanzar_bayesiana_lgbm
 from src_bayesianas.bayesiana_xgb_2 import lanzar_bayesiana_xgb
 from src_experimentos.experimento_eda import lanzar_eda
-from src_experimentos.c_3_exp_4 import lanzar_experimento_lgbm
+#from src_experimentos.c_3_exp_4 import lanzar_experimento_lgbm
+from src_experimentos.c_3_exp_0 import lanzar_experimento_lgbm
 from src_experimentos.experimento_1_xgb_edited import lanzar_experimento_xgb
 
 
@@ -78,6 +79,7 @@ def main():
         lanzar_eda(competencia=competencia)
     elif proceso_ppal =="feat_eng":
         lanzar_feat_eng(fecha,n_fe ,proceso_ppal)
+        logger.info(f"\n\n\n  Fin del proceso {proceso_ppal} .......ya puedo salir del tail..........  ")
     elif proceso_ppal =="bayesiana":
         if model_bay =="lgbm":
             lanzar_bayesiana_lgbm(fecha,semillas,n_bayesiana,proceso_ppal)
@@ -97,6 +99,7 @@ def main():
     elif (proceso_ppal =="experimento") or (proceso_ppal=="prediccion_final"):
         if model_exp =="lgbm":
             lanzar_experimento_lgbm(fecha,semillas , n_experimento , proceso_ppal)
+            logger.info(f"\n\n\n  Fin del proceso {proceso_ppal} .......ya puedo salir del tail..........  ")
         elif model_exp =="xgb":
             lanzar_experimento_xgb(fecha,semillas , n_experimento , proceso_ppal)
 
