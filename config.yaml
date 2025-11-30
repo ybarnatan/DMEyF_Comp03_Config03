@@ -54,7 +54,7 @@ configuracion_canaritos:
 
 
 configuracion_experimentos:
-  N_EXPERIMENTO :  "..comp3_conf3_exp800" 
+  N_EXPERIMENTO :  "..comp3_conf3_exp305" 
   N_SEMILLAS_EXP : 50
   TOP_MODELS : 1 # ZS =1
   MODEL_EXP : "lgbm" #| "lgbm"
@@ -73,7 +73,7 @@ configuracion_paths:
 
   path_inputs : 
     PATH_INPUT_DATA : "datasets/"
-    PATH_DATA_BASE_DB : "datasets/base_de_datos_exp800.duckdb"
+    PATH_DATA_BASE_DB : "datasets/base_de_datos.duckdb"
   path_outputs:
     PATH_OUTPUT: "outputs/"
     PATH_OUTPUT_DATA: "outputs/data_outputs/"
