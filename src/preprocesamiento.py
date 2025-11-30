@@ -236,7 +236,7 @@ def split_train_test_apred(n_exp:int|str,mes_train:list[int],mes_test:int|list[i
                                         (SELECT numero_de_cliente 
                                             FROM continuas_sample )
                                         )"""
-    logger.info(f"sql train query : {sql_train}")
+    # logger.info(f"sql train query : {sql_train}")
 
     if isinstance(mes_test,list):
         mes_test_sql = f"{mes_test[0]}"
@@ -250,13 +250,13 @@ def split_train_test_apred(n_exp:int|str,mes_train:list[int],mes_test:int|list[i
         sql_test=f"""select {sql_canaritos} * {exclude}
                     from df_completo
                     where foto_mes = {mes_test_sql}"""
-    logger.info(f"sql test query : {sql_test}")
+    # logger.info(f"sql test query : {sql_test}")
         
     mes_apred_sql = f"{mes_apred}"
     sql_apred=f"""select {sql_canaritos} * {exclude}
                 from df_completo
                 where foto_mes = {mes_apred_sql}"""
-    logger.info(f"sql apred query : {sql_apred}")
+    # logger.info(f"sql apred query : {sql_apred}")
 
    
     logger.info("Comienzo de la transformacion a polars de train data")
