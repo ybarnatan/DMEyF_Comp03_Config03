@@ -67,7 +67,7 @@ def split_train_test_apred(n_exp:int|str,mes_train:list[int],mes_test:int|list[i
                                                                np.ndarray,np.ndarray,np.ndarray, 
                                                                np.ndarray,pd.DataFrame,
                                                                pd.DataFrame]:
-    logger.info("Comienzo del slpiteo de TRAIN - TEST - APRED")
+    logger.info("[!!!]          Comienzo del spliteo de TRAIN - TEST - APRED")
 
         
     sql_canaritos =''
@@ -85,12 +85,15 @@ def split_train_test_apred(n_exp:int|str,mes_train:list[int],mes_test:int|list[i
         exclude+=')'
 
     mes_train_sql = f"{mes_train[0]}"
+    
     for m in mes_train[1:]:    
         mes_train_sql += f",{m}"
     sql_train=f"""select {sql_canaritos} * {exclude} 
                 from df_completo
                 where foto_mes IN ({mes_train_sql})"""
-    logger.info(f"sql train query : {sql_train}")
+                
+    # logger.info(f"sql train query : {sql_train}")
+   
     if isinstance(mes_test,list):
         mes_test_sql = f"{mes_test[0]}"
         for m in mes_test[1:]:    
@@ -103,13 +106,13 @@ def split_train_test_apred(n_exp:int|str,mes_train:list[int],mes_test:int|list[i
         sql_test=f"""select {sql_canaritos} * {exclude}
                     from df_completo
                     where foto_mes = {mes_test_sql}"""
-    logger.info(f"sql test query : {sql_test}")
+    # logger.info(f"sql test query : {sql_test}")
         
     mes_apred_sql = f"{mes_apred}"
     sql_apred=f"""select {sql_canaritos} * {exclude}
                 from df_completo
                 where foto_mes = {mes_apred_sql}"""
-    logger.info(f"sql apred query : {sql_apred}")
+    #logger.info(f"sql apred query : {sql_apred}")
     
     conn=duckdb.connect(PATH_DATA_BASE_DB)
     seed_float = (semilla % 10000) / 10000.0
@@ -120,6 +123,9 @@ def split_train_test_apred(n_exp:int|str,mes_train:list[int],mes_test:int|list[i
     conn.close()
     if subsampleo is not None:
         train_data=undersampling(train_data , subsampleo,semilla)
+    
+    
+    
     logger.info(f"Terminada la carga de df con columnas: {train_data.columns}")
     # TRAIN
     X_train = train_data.drop(['clase_ternaria', 'clase_peso', 'clase_binaria','clase_binaria_2'], axis=1)
