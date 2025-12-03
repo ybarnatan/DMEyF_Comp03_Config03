@@ -7,8 +7,9 @@ Este proyecto corresponde a la Competencia 03 de la materia DMEyF 2025 y consist
 
 El modelo principal utilizado es zLightGBM, una variante personalizada de LightGBM que incorpora la lógica de canaritos para la detección de sobreajuste y la validación de integridad del pipeline.
 
-# 🚀 Objetivo del Proyecto
-## Construir un pipeline reproducible de punta a punta, que incluye:
+## 🚀 Objetivo del Proyecto
+
+ Construir un pipeline reproducible de punta a punta, que incluye:
 
 * Feature engineering
 * Entrenamiento del modelo zLightGBM
@@ -16,14 +17,14 @@ El modelo principal utilizado es zLightGBM, una variante personalizada de LightG
 * Generación de predicciones finales
 
 
-# 🧠 Modelo Utilizado: zLightGBM
-## zLightGBM es una adaptación de LightGBM que incorpora:
+## 🧠 Modelo Utilizado: zLightGBM 
 
-Canaritos para control de generalización
-Ajustes específicos para alta dimensionalidad como el subsampleo.
+zLightGBM es una adaptación de LightGBM que incorpora:
+
++ Canaritos para control de generalización
++ Ajustes específicos para alta dimensionalidad como el subsampleo.
 
 
-# ▶️ Cómo ejecutar el pipeline completo
 
 
 ## 🛠️ Pasos de Instalación y Ejecución
@@ -40,7 +41,7 @@ Ajustes específicos para alta dimensionalidad como el subsampleo.
 | 8 | Instalar LightGBM modificado (zLightGBM) | ```bash\ncd ~/LightGBM\nsh ./build-python.sh install\n``` |
 | 9 | Ejecutar pipeline completo | `python main.py` |
 
-### 📦 Resultado
+## 📦 Resultado
 
 #### Generando modelos particulares
 
@@ -53,18 +54,16 @@ Ejecutar el archivo `main.py` dentro de la carpeta `ensambles` especificando en 
 
 
 
-# 📊 Resultados
+## 📊 Resultados
 
 El pipeline produce:
 
-Predicciones de churn para el conjunto de evaluación
-Logs del proceso
-Modelo entrenado 
-Métricas internas del desempeño
-Archivo final para submit
++ Predicciones de churn para el conjunto de evaluación
++ Logs del proceso
++ Modelo entrenado 
++ Métricas internas del desempeño
++ Archivo final para submit
 
-
-## 📊 Resultados del Modelo Ensamble
 
 | Concepto | Detalle |
 |----------|---------|
