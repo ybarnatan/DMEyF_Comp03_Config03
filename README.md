@@ -76,7 +76,8 @@ El pipeline produce:
 | **Nro clientes estimulados — Mes a predecir 09** | `Umbral elegido a mano 11500` |
 
 
-<img src="Entregable%20comp%2003/Ensamble 492 test 06.png" width="600">
+<img src="Entregable%20comp%2003/Ensamble 492 test 06.png" height ="400" width="600">
+<img src="Entregable%20comp%2003/Ensamble 492 test 07.png" height ="400" width="600">
 
 
 
