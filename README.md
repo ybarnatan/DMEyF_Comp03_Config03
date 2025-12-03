@@ -1,6 +1,5 @@
 # 📘 DMEyF 2025 — Maestría en Explotación de Datos y Descubrimiento del Conocimiento (FCEN – UBA)
 
-
 ## Competencia 03 — Pipeline Completo de Modelado de Churn en Clientes Premium
 
 
@@ -50,16 +49,17 @@ Ajustes específicos para alta dimensionalidad como el subsampleo.
 La ejecución generará el **modelo entrenado** y un **archivo de predicciones finales** listo para *submit*.
 
 
-**Generando ensambles**
+### Generando ensambles
 
-Ejecutar `python main.py` dentro de la carpeta `ensambles`
+Ejecutar el archivo `python main.py` dentro de la carpeta `ensambles` especificando en `c_3_exp_ENSAMBLE_automatico.py`. Esto generará el modelo entrenado y el archivo de predicciones finales listo para submit de modo iterativo, para todas las combinaciones de modelos ya realizados y alojados en el Bucket de la VM de Google Cloud.
 
-Esto generará el modelo entrenado y el archivo de predicciones finales listo para submit de modo iterativo, para todas las combinaciones de modelos ya realizados y alojados en el Bucket de la VM de Google Cloud.
+Luego  ejecutar el mismo `python main.py` dentro de la carpeta `ensambles` especificando en `c_3_exp_ENSAMBLE.py` el set de modelos a ensamblar.
 
 ---
 
 
 # 📊 Resultados
+
 El pipeline produce:
 
 Predicciones de churn para el conjunto de evaluación
