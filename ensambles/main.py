@@ -24,7 +24,7 @@ from src_experimentos.experimento_1_xgb_edited import lanzar_experimento_xgb
 n_trials=N_TRIALS
 creacion_directorios()
 fecha = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-test= "TEST_TEST_TEST_TEST"
+test= "TEST____"
 # ---------------------------------------------------------------------------------------------
 competencia = COMPETENCIA
 proceso_ppal = PROCESO_PPAL
