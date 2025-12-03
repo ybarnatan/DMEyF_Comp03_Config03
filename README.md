@@ -85,5 +85,6 @@ El pipeline produce:
 
 
 En el `config.yaml` se uso la configuracion seteada en el archivo para generar para todos los experimentos, a excepcion de los modelos "Exp303, 304, 305 y 314a", donde se uso:
-  SEMILLA: 80200
-  SEMILLAS: [80021, 80039, 80051, 80071, 80077]
+
++ SEMILLA: 80200
++ SEMILLAS: [80021, 80039, 80051, 80071, 80077]
