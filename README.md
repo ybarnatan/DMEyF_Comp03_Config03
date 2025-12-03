@@ -68,7 +68,7 @@ El pipeline produce:
 
 | Concepto | Detalle |
 |----------|---------|
-| **Combinacion de ensamble elegida** | `Nro: 492` |
+| **Combinacion de ensamble elegida (ver `.json`)** | `492` |
 | **Modelos seleccionados para el ensamble** | `Exp302` , `Exp303`, `Exp 314c`, `Exp321` |
 | **Ganancia meseta (+-500 clientes) — Mes Test 06** | `415 M (n clientes = 10407)` | 
 | **Ganancia meseta (+-500 clientes) — Mes Test 07** | `432 M  (n clientes = 11597)` |
