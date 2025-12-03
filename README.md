@@ -17,17 +17,6 @@ El modelo principal utilizado es zLightGBM, una variante personalizada de LightG
 * Evaluación del modelo
 * Generación de predicciones finales
 
----
-
-# 📂 Estructura fundamental del proyecto
-
-├── data/                # Datos crudos y procesados
-├── models/              # Modelos entrenados y artefactos
-├── src/                 # Módulos del pipeline (EDA, features, entrenamiento, etc.)
-├── outputs/             # Predicciones generadas para submit
-├── main.py              # Script principal del pipeline completo
-├── README.md            # Documentación del proyecto
-└── requirements.txt     # Dependencias del entorno
 
 ---
 
