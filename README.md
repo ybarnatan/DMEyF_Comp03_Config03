@@ -20,6 +20,7 @@ El modelo principal utilizado es zLightGBM, una variante personalizada de LightG
 ---
 
 # 📂 Estructura fundamental del proyecto
+
 ├── data/                # Datos crudos y procesados
 ├── models/              # Modelos entrenados y artefactos
 ├── src/                 # Módulos del pipeline (EDA, features, entrenamiento, etc.)
