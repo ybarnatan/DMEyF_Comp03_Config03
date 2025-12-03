@@ -7,6 +7,7 @@ Este proyecto corresponde a la Competencia 03 de la materia DMEyF 2025 y consist
 
 El modelo principal utilizado es zLightGBM, una variante personalizada de LightGBM que incorpora la lógica de canaritos para la detección de sobreajuste y la validación de integridad del pipeline.
 
+
 ## 🚀 Objetivo del Proyecto
 
  Construir un pipeline reproducible de punta a punta, que incluye:
@@ -39,7 +40,7 @@ zLightGBM es una adaptación de LightGBM que incorpora:
 | 6 | Instalar zLightGBM (clonar repo LightGBM modificado) | ```bash\ncd\nrm -rf LightGBM\ngit clone --recursive https://github.com/dmecoyfin/LightGBM\n``` |
 | 7 | Activar entorno y desinstalar LightGBM estándar | ```bash\nsource ~/.venv/bin/activate\npip uninstall --yes lightgbm\n``` |
 | 8 | Instalar LightGBM modificado (zLightGBM) | ```bash\ncd ~/LightGBM\nsh ./build-python.sh install\n``` |
-| 9 | Ejecutar pipeline completo | `python main.py` |
+| 9 | Ejecutar pipeline completo cambiando el proceso principal en `config.yaml` | `python main.py` |
 
 ## 📦 Resultado
 
@@ -67,17 +68,21 @@ El pipeline produce:
 
 | Concepto | Detalle |
 |----------|---------|
-| **Modelos seleccionados para el ensamble** | ... |
-| **Ganancia — Mes Test 06** | ... |
-| **Ganancia — Mes Test 07** | ... |
-| **Ganancia estimada — Mes a predecir 09** | Promedio del backtest en meses 06 y 07 |
-| **Nro clientes estimulados — Mes a predecir 09** | ... |
+| **Combinacion de ensamble elegida** | `Nro: 492` |
+| **Modelos seleccionados para el ensamble** | `Exp302` , `Exp303`, `Exp 314c`, `Exp321` |
+| **Ganancia meseta (+-500 clientes) — Mes Test 06** | `415 M (n clientes = 10407)` | 
+| **Ganancia meseta (+-500 clientes) — Mes Test 07** | `432 M  (n clientes = 11597)` |
+| **Ganancia estimada — Mes a predecir 09** | `Promedio del backtest en meses 06 y 07` |
+| **Nro clientes estimulados — Mes a predecir 09** | `Umbral elegido a mano 11500` |
+
+
+<img src="Entregable%20comp%2003/Ensamble 492 test 06.png" width="600">
+
+
 
 *Nota:*
 
-En el `config.yaml` se uso la siguiente configuracion para generar para todos los experimentos:
 
-
-A excepcion de los modelos "303, 304, 305 y 314 a", donde se usaron:
-
-.
+En el `config.yaml` se uso la configuracion seteada en el archivo para generar para todos los experimentos, a excepcion de los modelos "Exp303, 304, 305 y 314a", donde se uso:
+  SEMILLA: 80200
+  SEMILLAS: [80021, 80039, 80051, 80071, 80077]
