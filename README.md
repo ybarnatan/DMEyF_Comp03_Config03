@@ -7,8 +7,6 @@ Este proyecto corresponde a la Competencia 03 de la materia DMEyF 2025 y consist
 
 El modelo principal utilizado es zLightGBM, una variante personalizada de LightGBM que incorpora la lógica de canaritos para la detección de sobreajuste y la validación de integridad del pipeline.
 
----
-
 # 🚀 Objetivo del Proyecto
 ## Construir un pipeline reproducible de punta a punta, que incluye:
 
@@ -18,15 +16,12 @@ El modelo principal utilizado es zLightGBM, una variante personalizada de LightG
 * Generación de predicciones finales
 
 
----
-
 # 🧠 Modelo Utilizado: zLightGBM
 ## zLightGBM es una adaptación de LightGBM que incorpora:
 
 Canaritos para control de generalización
 Ajustes específicos para alta dimensionalidad como el subsampleo.
 
----
 
 # ▶️ Cómo ejecutar el pipeline completo
 
@@ -56,7 +51,6 @@ Ejecutar proyecto desde `main.py` eligiendo el experimento correspondiente dentr
 
 Ejecutar el archivo `main.py` dentro de la carpeta `ensambles` especificando en `c_3_exp_ENSAMBLE_automatico.py`. Esto generará el modelo entrenado y el archivo de predicciones finales listo para submit de modo iterativo, para todas las combinaciones de modelos ya realizados y alojados en el Bucket de la VM de Google Cloud.
 
----
 
 
 # 📊 Resultados
@@ -69,7 +63,6 @@ Modelo entrenado
 Métricas internas del desempeño
 Archivo final para submit
 
----
 
 ## 📊 Resultados del Modelo Ensamble
 
@@ -84,7 +77,6 @@ Archivo final para submit
 *Nota:*
 
 En el `config.yaml` se uso la siguiente configuracion para generar para todos los experimentos:
-
 
 
 A excepcion de los modelos "303, 304, 305 y 314 a", donde se usaron:
