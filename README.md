@@ -46,14 +46,15 @@ Ajustes específicos para alta dimensionalidad como el subsampleo.
 | 9 | Ejecutar pipeline completo | `python main.py` |
 
 ### 📦 Resultado
-La ejecución generará el **modelo entrenado** y un **archivo de predicciones finales** listo para *submit*.
+
+#### Generando modelos particulares
+
+Ejecutar proyecto desde `main.py` eligiendo el experimento correspondiente dentro de la carpeta `src_experimentos` especificando el modelo a ejecutar.
 
 
-### Generando ensambles
+#### Generando ensambles
 
-Ejecutar el archivo `python main.py` dentro de la carpeta `ensambles` especificando en `c_3_exp_ENSAMBLE_automatico.py`. Esto generará el modelo entrenado y el archivo de predicciones finales listo para submit de modo iterativo, para todas las combinaciones de modelos ya realizados y alojados en el Bucket de la VM de Google Cloud.
-
-Luego  ejecutar el mismo `python main.py` dentro de la carpeta `ensambles` especificando en `c_3_exp_ENSAMBLE.py` el set de modelos a ensamblar.
+Ejecutar el archivo `main.py` dentro de la carpeta `ensambles` especificando en `c_3_exp_ENSAMBLE_automatico.py`. Esto generará el modelo entrenado y el archivo de predicciones finales listo para submit de modo iterativo, para todas las combinaciones de modelos ya realizados y alojados en el Bucket de la VM de Google Cloud.
 
 ---
 
@@ -68,27 +69,21 @@ Modelo entrenado
 Métricas internas del desempeño
 Archivo final para submit
 
+---
 
+## 📊 Resultados del Modelo Ensamble
 
-Se selecciono el modelo ensamble compuesto por:
-
-+ ... 
-+ ... 
-+ ... 
-+ ... 
-
-Que da una ganancia en
-
-Mes test 06:
-Mes test 07:
-
-Mes a predecir: 09, ganancia estimada como promedio del backtest en 06 y 07. 
-
+| Concepto | Detalle |
+|----------|---------|
+| **Modelos seleccionados para el ensamble** | ... |
+| **Ganancia — Mes Test 06** | ... |
+| **Ganancia — Mes Test 07** | ... |
+| **Ganancia estimada — Mes a predecir 09** | Promedio del backtest en meses 06 y 07 |
+| **Nro clientes estimulados — Mes a predecir 09** | ... |
 
 *Nota:*
 
 En el `config.yaml` se uso la siguiente configuracion para generar para todos los experimentos:
-
 
 
 
