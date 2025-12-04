@@ -49,6 +49,22 @@ zLightGBM es una adaptación de LightGBM que incorpora:
 Ejecutar proyecto desde `main.py` eligiendo el experimento correspondiente dentro de la carpeta `src_experimentos` especificando el modelo a ejecutar.
 
 
+
+
+
+| Exp | Variables y Feat Eng             | Meses                        | Binaria | Subsampleo |
+|-----|------------------------|------------------------------|---------|------------|
+| 302 | Todas (percentiles)     | [2020, 2021)                 | 2       | 0.1        |
+| 303 | Todas (percentiles)     | [2019, 2020)                 | 1       | 0.1        |
+| 314c| Todas (percentiles)     | Post-Pandemia (202012 a 202104)| 1       | 0.1        |
+| 321 | Todas                   | Todos                        | 1       | 0.05       |
+
+
+
++ Binaria 1: BAJA+1 y BAJA+2 juntos
++ Binaria 2: solo BAJA+2
+
+
 #### Generando ensambles
 
 Ejecutar el archivo `main.py` dentro de la carpeta `ensambles` especificando en `c_3_exp_ENSAMBLE_automatico.py`. Esto generará el modelo entrenado y el archivo de predicciones finales listo para submit de modo iterativo, para todas las combinaciones de modelos ya realizados y alojados en el Bucket de la VM de Google Cloud.
