@@ -52,7 +52,7 @@ Ejecutar proyecto desde `main.py` eligiendo el experimento correspondiente dentr
 
 
 
-| Exp | Variables y Feat Eng             | Meses                        | Binaria | Subsampleo |
+| Exp | Variables y Feat Eng             | Meses                        | Binaria | Subsampleo clase mayoritaria|
 |-----|------------------------|------------------------------|---------|------------|
 | 302 | Todas (percentiles)     | [2020, 2021)                 | 2       | 0.1        |
 | 303 | Todas (percentiles)     | [2019, 2020)                 | 1       | 0.1        |
