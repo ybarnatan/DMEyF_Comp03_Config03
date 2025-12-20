@@ -96,9 +96,7 @@ El pipeline produce:
 <img src="Entregable%20comp%2003/Ensamble 492 test 07.png" height ="400" width="600">
 
 
-
-*Nota:*
-
+### 📅 Mes a predecir: Septiembre 2021
 
 En el `config.yaml` se uso la configuracion seteada en el archivo para generar para todos los experimentos, a excepcion de los modelos "Exp303, 304, 305 y 314a", donde se uso:
 
