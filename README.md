@@ -42,6 +42,27 @@ zLightGBM es una adaptación de LightGBM que incorpora:
 | 8 | Instalar LightGBM modificado (zLightGBM) | ```bash\ncd ~/LightGBM\nsh ./build-python.sh install\n``` |
 | 9 | Ejecutar pipeline completo cambiando el proceso principal en `config.yaml` | `python main.py` |
 
+
+**Nota 1:** los procesos principales disponibles (punto 9), a correrse de modo secuencial y seteados en `config.yaml`, son:
+
+* 1- `creacion_target_clase_ternaria`
+* 2- `feat_eng`
+* 3- `bayesiana`
+* 4- `experimento` 
+* 5- `prediccion_final` 
+
+
+ **Nota 2:** Otros puntos de configuracion importantes en el `config.yaml` son:
+
+* `SUBSAMPLEO`
+* `SEMILLAS`
+* `GANANCIA`
+* `ESTIMULO`
+
+
+ **Nota 3:** Proyecto diagramado para ser ejecutado en VM de Google Cloud o en local segun el parametro `IN_GCP` del `config.yaml`
+
+
 ## 📦 Resultado
 
 #### Generando modelos particulares
